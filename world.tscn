@@ -1,8 +1,57 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5eeo2u0veouh"]
+[gd_scene load_steps=5 format=3 uid="uid://c5eeo2u0veouh"]
 
 [ext_resource type="PackedScene" uid="uid://btt774ds8655s" path="res://player/player.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://c1v4iedtpk3rn" path="res://world/grass_background.png" id="1_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://cwln7jll4lcuw" path="res://world/bush.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://crnuxasoidhix" path="res://world/tree.tscn" id="4_aqk2v"]
 
 [node name="World" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(320, 180)
+
+[node name="GrassBackground" type="TextureRect" parent="Parallax2D"]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_fj7yv")
+stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 position = Vector2(153, 92)
+
+[node name="Bush" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(194, 139)
+
+[node name="Bush2" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(165, 143)
+
+[node name="Bush3" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(242, 43)
+
+[node name="Bush4" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(182, 151)
+
+[node name="Bush5" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(221, 51)
+
+[node name="Bush6" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(137, 136)
+
+[node name="Bush7" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(147, 151)
+
+[node name="Tree" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(141, 53)
+
+[node name="Tree2" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(76, 161)
+
+[node name="Tree3" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(254, 141)
+
+[node name="Tree4" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(276, 58)
+
+[node name="Tree5" parent="." instance=ExtResource("4_aqk2v")]
+position = Vector2(105, 60)
